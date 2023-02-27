@@ -41,7 +41,32 @@ def fun(n,x):
         counter = counter - 1
     return amount
 
-### Cost model for each operation cost 
+#### Cost model for each operation cost 
+
+####Asymptotic Notation 
+# In mathematics (logic), the symbol ∃
+
+    # ∃ is read as "there exists" and the symbol 
+    # ∀
+    # ∀ is read as for all. 
+
+# f(g) = BIG O g(). ignore any addtional and coefficient that put on the function, compare the power firstly
+# Big O for comparing the function of the overtaken 
+
+####  f = O(g)  which is the asymptotic upper bound 
+#      e.g.: 200000* n^2 = [<=] O (0.00000000002* n^3) 
+#              
+###   f = OMEGA (g) which is the asymptotic lower bound 
+#      e.g.: 
+
+####  Big Theta Quatation  f = Big Theta (g)      : which is the asymptotic equal
+
+
+#### Asymtotics Examples 
+# COMPANY THE LOG AND N SQUARE, WHICH THE N SQUARE IS MORE PROMINENT 
+
+
+
 
 
 
