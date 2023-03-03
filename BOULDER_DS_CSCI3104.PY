@@ -65,6 +65,15 @@ def fun(n,x):
 #### Asymtotics Examples 
 # COMPANY THE LOG AND N SQUARE, WHICH THE N SQUARE IS MORE PROMINENT 
 
+####Analysis of Algorithms  - Binary Search
+#      key idea:    S1. find the mid = ( left + right) // 2
+#                   S2. find the new mid again 
+#                   S3. find the index mide number, if not /= target
+#                   S4. return w
+
+
+#### Binary SEARCH iMPLEMENTATION 
+
 
 
 
