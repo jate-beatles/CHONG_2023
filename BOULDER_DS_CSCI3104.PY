@@ -72,9 +72,53 @@ def fun(n,x):
 #                   S4. return w
 
 
-#### Binary SEARCH iMPLEMENTATION 
+#### Binary SEARCH IMPLEMENTATION
+#    the time analysis is the that in the worst scanirao  k = log2(n)
+#               thus 
 
 
+### Analysis fo the Alogrithms  - Merge Sort 
+#        split the order, then sort, then merge 
+
+# pseudocode
+# 
+#   
+# Merger procedure Correctness Argument 
+# Merger running time is the BIG THETA of the [right - left + 1]
+# 
+
+def mergesort ( array, left, right)
+    if ( left >= right):
+        return
+    if (left + 1 == right):
+    if lst[left] > lst[right]:
+     swap(lst, left, right)
+     return
+    else
+    mid = (left + right)//2
+    mergesort(array, left, mid)
+    mergesort(array, mid+1, right)
+    
+    merge(array, left, mid, right)
+
+def merge(array, left, mid, right):
+i = left
+j = mid + 1
+tmp_store = []
+
+while (i <= mid and j <= right):
+     if (array[i] < array[j]):
+        #append array[i] to tmp_store
+        i = i + 1
+     else:
+        #append array[j] to tmp_store
+        j = j + 1
+
+if i < mid:
+       #Copy remainder of first part to tmp_store
+if j < right:
+ #Copy remainder of second part to tmp_store
+ #copy back from tmp_store into array[left..right]
 
 
 
