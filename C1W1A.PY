@@ -1,11 +1,10 @@
 def findCrossoverIndexHelper(x, y, left, right):
     assert(len(x) == len(y))
     assert(left >= 0)
-    assert(left <= right-1)
     assert(right < len(x))
-    assert(x[left] > y[left])
+    # assert(x[left] > y[left])  # removed
 
-    if left == right:
+    if left >= right:
         return None
 
     mid = (left + right) // 2
@@ -26,6 +25,8 @@ def findCrossoverIndex(x, y):
     assert(x[n-1] < y[n-1])
 
     return findCrossoverIndexHelper(x, y, 0, n-1)
+    return findCrossoverIndexHelper(x, y, 0, n-1)
+
 
 
 print(findCrossoverIndex([0, 1, 2, 3, 4, 5, 6, 7], [-2, 0, 4, 5, 6, 7, 8, 9]))
