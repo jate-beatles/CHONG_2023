@@ -122,7 +122,71 @@ if j < right:
 
 
 ###############################################################################
+###############################################################################
+#  Heap and Hashtable Data Structure
+# 
+#-------------------------------------------------------------------------------
+# DynamicArray: 
 
+class DynamicArray: 
+    
+    def __init__(self, initial_size=16, initial_fill=0, debug=False):
+        self.allocated_size = initial_size 
+        self.size = 0
+        self.array = [initial_fill] * initial_size
+        self.debug = debug
+    
+    # This allows us to directly access d[idx]
+    def __getitem__(self, idx):
+        assert idx >= 0 and idx < self.size 
+        return self.array[idx]
+    
+    # This allows us to write d[idx] = val 
+    def __setitem__(self, idx, val):
+        assert idx >= 0 and idx < self.size 
+        self.array[idx] = val
+    
+    def append(self, x):
+        # Do we have enough allocated size to just append x to the array?
+        if self.size >= self.allocated_size:
+            if self.debug: 
+                print(f'Ran out of memory: old allocated size: {self.allocated_size}, new allocated size is {2*self.allocated_size}')
+            # No, we have run out of pre-allocated memory
+            # Double the size of the array 
+            # Double the size of the allocated memory
+            self.allocated_size = 2 * self.allocated_size
+            old_array = self.array
+            # allocate and copy.
+            new_array = allocateMemory(self.allocated_size)
+            copyInto(old_array, new_array)
+            # update the array.
+            self.array = new_array
+        # Append the element to the end
+        self.array[self.size] = x
+        # Update its size.
+        self.size = self.size + 1
 
+l = DynamicArray(initial_size=1, initial_fill=0, debug=True)
+for j in range(1000):
+    l.append(j)
+    
+print(f'l[5] = {l[5]}')
+l[0] = 30
+print(f'l[0] = {l[0]}')
+
+# Ran out of memory: old allocated size: 1, new allocated size is 2
+# Ran out of memory: old allocated size: 2, new allocated size is 4
+# Ran out of memory: old allocated size: 4, new allocated size is 8
+# Ran out of memory: old allocated size: 8, new allocated size is 16
+# Ran out of memory: old allocated size: 16, new allocated size is 32
+# Ran out of memory: old allocated size: 32, new allocated size is 64
+# Ran out of memory: old allocated size: 64, new allocated size is 128
+# Ran out of memory: old allocated size: 128, new allocated size is 256
+# Ran out of memory: old allocated size: 256, new allocated size is 512
+# Ran out of memory: old allocated size: 512, new allocated size is 1024
+# l[5] = 5
+# l[0] = 30
+
+#
 
 
