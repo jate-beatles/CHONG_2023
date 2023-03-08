@@ -187,6 +187,8 @@ print(f'l[0] = {l[0]}')
 # l[5] = 5
 # l[0] = 30
 
-#
+# Mean Heap is the each of the parent is less or equal to it's childrens 
+# Heap is binary trees with special laid out of the arry 
+# 
 
 
