@@ -191,4 +191,21 @@ print(f'l[0] = {l[0]}')
 # Heap is binary trees with special laid out of the arry 
 # 
 
+# Heap operation  - deleted the element of the heap 
+#                 - insert the element into the heap 
+#### Bubble up  & Bubble down 
+# Imagine the heap is broken - one of child is in wrong postion 
+#### Bubble up to swap the child with the child 
+#########################################################################################
+# Pseudo Code for the Bubble UP 
+# bubble up ( A, j) : 
+#     if j <= 1: 
+#         return
+#     else: 
+#         if A[j] <= A[j//2]:
+#             swap( A[j], A[j//2])
+#             bubbleup(A,j//2)
+########################################### Bubble up  = theta ( log2(n))
+
+
 
