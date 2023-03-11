@@ -208,4 +208,54 @@ print(f'l[0] = {l[0]}')
 ########################################### Bubble up  = theta ( log2(n))
 
 
+################## Heap sort --- insert/delete / heapify  -----priority of Q
+
+# s1: how to insert --conplexity - theta(log(2)n)
+#     1.append the e to the heap array
+#     2.bubbleup(a,n+1)
+# s2: delete the e of the heap k --complexity theta(log(2)n)
+#     delete - then a hole happen -- replace the delete the aj wiht an
+#     adjust the size to n-1
+#     fix the broken -- bubble up if aj is the less than the parent
+#                     -- bubble down if the aj is greater than ist children 
+#     complexity of the deletion - 1. swap 2.adjust 3.bubbleup bdown
+# s3: find the smallest in the heap -- heapify algorithm - complexity theta (n)
+#     application: Q called priority q 
+#     FIFO  que  - shedule/parket - the insertion que have different priority 
+#     random array which turn into a heap - [mean heap]  
+                        
+#     sinply idea: for i = n/2 down to 1  then bubbledown(a,i) #a is a mean heap  
+#     complexity of heapify: is the lnear of the size array theta(n)
+# s4: heap sort, sort the array in ascending array
+#     1. heapify(a)  insert:
+#     2. delete
+#                       
+#
+###################### Hastables : Basic Introduction 
+# hashtable is table  - slots/ bouckets / bin /   each row has the key and the value 
+#                         
+#       row and column 
+# hash() is more efficiently compute for the hash value to find in the hashtable 
+# not hte unique key but lots of keys 
+# hash() should alone with the table, you can map lots key in same slot table 
+# ###hot to insert the hastable 
+#lots of keys into same key --- how to handle the collision 
+# 
+#  handle collision  -  s1. chaining [insert the same key and value into the append of the key]
+#                           delete, find the slot, search in the list of the slots 
+#                           cost - if all elemets collide onto the 1 slot: in the worst case -- search for the entire slots, and bigO(n) 
+#                           load factors --- number of the value insert into hashtable / slots 
+#                           
+#                       s2. Rehasing the hashtable, each element of old hash change to new hashtable, if empty calculate the hash value 
+#                            
+#        
+#Concluding Thoughts 
+# 
+# 
+#  
+#                    - 
+# 
+
+
+
 
