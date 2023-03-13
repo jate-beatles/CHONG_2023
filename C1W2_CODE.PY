@@ -114,8 +114,9 @@ class TopKHeap:
     # array A out into its proper place so that the array A is sorted.
     # return the "displaced last element" jHat (None if no element was displaced)
     def insert_into_A(self, elt):
-        print("k = ", self.k)
-        assert(self.size() < self.k)
+        k = self.k
+        print("k = ", k)
+#         assert(self.size() < k)
         self.A.append(elt)
         j = len(self.A)-1
         while (j >= 1 and self.A[j] < self.A[j-1]):
@@ -123,7 +124,10 @@ class TopKHeap:
             (self.A[j], self.A[j-1]) = (self.A[j-1], self.A[j])
             j = j -1 
         return
-          
+    # bug here. it should be self.k (or add k = self.k)
+    # bug assert(self.size() < k) ????
+    
+            
     # Function: insert -- insert an element into the data structure.
     # Code to handle when self.size < self.k is already provided
     def insert(self, elt):
@@ -134,19 +138,29 @@ class TopKHeap:
             return 
         # Code up your algorithm here.
         # your code here
- 
-# Function: Delete top k -- delete an element from the array A
-# In particular delete the j^{th} element where j = 0 means the least element.
-# j must be in range 0 to self.k-1
-
+        # strategy: 
+        # 1. call insert_into_A, len(k) become k+1 temperally
+        # 2. pop A[-1] and insert A[-1] to H (call H.insert(elt)), then len(A) back to k
+        self.insert_into_A(elt)
+        self.H.insert(self.A.pop(-1))
+        
+    # Function: Delete top k -- delete an element from the array A
+    # In particular delete the j^{th} element where j = 0 means the least element.
+    # j must be in range 0 to self.k-1
     def delete_top_k(self, j):
         k = self.k
         assert self.size() > k # we need not handle the case when size is less than or equal to k
         assert j >= 0
         assert j < self.k
         # your code here
- 
-
+        # strategy:
+        # 1. delete: (when j < k, checked) call A.pop(j)
+        # 2. refill: A.append(H[1]), no need to update for A (since we can assure any a in A is larger than any h in H)
+        # 3. update H: call H.delete_min
+        self.A.pop(j)
+        self.A.append(self.H.min_element())
+        self.H.delete_min()
+        
 h = TopKHeap(5)
 # Force the array A
 h.A = [-10, -9, -8, -4, 0]
@@ -156,10 +170,6 @@ h.A = [-10, -9, -8, -4, 0]
 print('Initial data structure: ')
 print('\t A = ', h.A)
 print('\t H = ', h.H)
-
-
-
-
 
 
 ####################################################################################################
@@ -263,6 +273,8 @@ class MaxHeap:
     # Use bubble_up/bubble_down function
     def insert(self, elt):
         # your code here
+        # strategy: 1. insert at the end, (note: the index start at position 1)
+        # 2.only need to check parents (call bubble_up)
         self.H.append(elt)
         index = self.size()
         self.bubble_up(index)
@@ -272,6 +284,10 @@ class MaxHeap:
     # delete the largest element in the heap. Use bubble_up/bubble_down
     def delete_max(self):
         # your code here
+        # stratgegy: delete the min (index==1), replace with the last element, then rebuild heap 
+        # 1. use the last element to inplace the delete element (pop()). 
+        # 2. then call bubble_down
+        # (note: the index start at position 1)
         if self.size() == 0:
             return None
         max_elt = self.H[1]
@@ -361,6 +377,14 @@ class MedianMaintainingHeap:
             return 
         # Now assume both heaps are non-empty
         # your code here
+        #         if elt >= self.hmax.max_element():
+#             self.hmin.insert(elt)
+#         else:
+#             self.hmax.insert(elt)
+        # note: (based on the implementation invariables, aka assert), we need to insert element into hmin
+        # self.hmin.insert(elt)
+        # self.balance_heap_sizes() 
+        
         if elt < self.hmax.max_element():
             self.hmax.insert(elt)
         else:
