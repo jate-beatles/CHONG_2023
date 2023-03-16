@@ -1,0 +1,15 @@
+digraph {
+	"Parent Company" [label="Parent Company"]
+	"Intermediate Company 1" [label="Intermediate Company 1"]
+	"Intermediate Company 2" [label="Intermediate Company 2"]
+	"Subsidiary 1 of Intermediate Company 2" [label="Subsidiary 1 of Intermediate Company 2"]
+	"Subsidiary 2 of Intermediate Company 2" [label="Subsidiary 2 of Intermediate Company 2"]
+	"Subsidiary 1 of Intermediate Company 1" [label="Subsidiary 1 of Intermediate Company 1"]
+	"Subsidiary 2 of Intermediate Company 1" [label="Subsidiary 2 of Intermediate Company 1"]
+	"Parent Company" -> "Intermediate Company 1" [label="50% / 50%"]
+	"Parent Company" -> "Intermediate Company 2" [label="50% / 50%"]
+	"Intermediate Company 2" -> "Subsidiary 1 of Intermediate Company 2" [label="50% / 50%"]
+	"Intermediate Company 2" -> "Subsidiary 2 of Intermediate Company 2" [label="50% / 50%"]
+	"Intermediate Company 1" -> "Subsidiary 1 of Intermediate Company 1" [label="50% / 50%"]
+	"Intermediate Company 1" -> "Subsidiary 2 of Intermediate Company 1" [label="50% / 50%"]
+}

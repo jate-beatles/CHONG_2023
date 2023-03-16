@@ -1,0 +1,8 @@
+﻿Company Name,Share Percentage,Voting Rights,Parent Company
+Parent Company,1,1,N/A
+Intermediate Company 1,50%,50%,Parent Company
+Intermediate Company 2,50%,50%,Parent Company
+Subsidiary 1 of Intermediate Company 2,50%,50%,Intermediate Company 2
+Subsidiary 2 of Intermediate Company 2,50%,50%,Intermediate Company 2
+Subsidiary 1 of Intermediate Company 1,50%,50%,Intermediate Company 1
+Subsidiary 2 of Intermediate Company 1,50%,50%,Intermediate Company 1
