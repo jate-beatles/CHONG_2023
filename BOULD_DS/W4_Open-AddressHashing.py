@@ -17,4 +17,16 @@
 #               - already know the keys and no collision possible 
 #              
 ###         Why the hash is not perfect? cause the collistion- universeal hash function are fixed 
-#            
+##            for the universal hash families - Possibilities = 1/m  = c/m 
+#             even if the average is amll, there may be large out-liers 
+#             
+####        Perfect Hashing 
+#            - no collision 
+#               K*n^2 of the slots, and if collision happens, then redo the procedures 
+#            1. 
+#             
+#                   
+# 
+
+
+
