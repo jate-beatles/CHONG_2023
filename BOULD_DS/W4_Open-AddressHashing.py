@@ -23,10 +23,21 @@
 ####        Perfect Hashing 
 #            - no collision 
 #               K*n^2 of the slots, and if collision happens, then redo the procedures 
-#            1. 
+#            1. choose the random hash function 
+#            2. hashtable with Kn^2 slots, where K = 2c
+#            3. insert each key 
+#            4. if fail - abort and redo the trail 
 #             
-#                   
-# 
-
+#
+#             
+##         K*n^2 is quite wastefull - alternative 
+#           create two level hash table 
+#           - put new big hash table - two level 
+#           - the total size of the 2 levle hastable less than C * n(j) 
+#                             
+####    Cuckoo Hashing 
+#           Cuckoo bids kick other birds eggs 
+#           
+#
 
 
