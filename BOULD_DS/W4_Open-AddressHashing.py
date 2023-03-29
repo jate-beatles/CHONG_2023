@@ -39,5 +39,20 @@
 #           Cuckoo bids kick other birds eggs 
 #           
 #
+################################################################
+####         Bloom Filters  
+#               Hash table filter 
+#                Creator name bloom
+#                approximate in nature: false positives possibles 
+#            >>>Basice idea: give a key to find whether in the data set 
+#            >>> 100% belong to the data set 
+#            >>> maybe FP or TP 
+#            >>> 
+#
+#
+#
+#
+#
+#
 
 
