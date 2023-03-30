@@ -47,9 +47,14 @@
 #            >>>Basice idea: give a key to find whether in the data set 
 #            >>> 100% belong to the data set 
 #            >>> maybe FP or TP 
+#            >>> False Postive of the probability  - set the key as 1 = (1- 1/m) ^kn
+#            >>>  (1-e^-kn)
+#            Bloom Filters : Caching - not more space in the catching
+#           One-hit wonders - 
 #            >>> 
 #
-#
+#$##############################################################
+#           Count-Min Sketching Using Hashing 
 #
 #
 #
