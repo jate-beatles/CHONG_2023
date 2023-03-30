@@ -55,7 +55,8 @@
 #
 #$##############################################################
 #           Count-Min Sketching Using Hashing 
-#
+#            > stream of date: x1, x2, x3,... xw;
+#            > 
 #
 #
 #
