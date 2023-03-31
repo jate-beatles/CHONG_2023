@@ -1,3 +1,5 @@
+
+#%%    Generate the Randaom Prime Nujmbers 
 import random 
 
 # Utility function to do 
@@ -98,3 +100,5 @@ for n in range(1,100):
 		print(n , end=" "); 
 
 # This code is contributed by mits (see citation above)
+
+#%%
