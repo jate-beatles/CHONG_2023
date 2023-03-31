@@ -59,6 +59,24 @@
 #            > 
 #
 #
+#################################################################
+#           String Matching 
+#           > does a pattern P of size m occur in a string S of size n?
+#           simple algorithm: 
+#               for each s = 1,.....n-m+1
+#                check if substring S[s] ....S[s+n-1] 
+#          >>>> Speeding up using the hash - fuctions 
+#               for each s = 1,.....n-m+1
+#                  compute: q =- h(S[s] ......S[s+m-1]) 
+#                 if  r = 1: 
+#                   compare S[s] ....S[s+m-1] with P
+#       
+
+###         find the same partten from two strings of the S1 and S2
 #
+#
+#
+#
+
 
 
