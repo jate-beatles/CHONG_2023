@@ -62,6 +62,29 @@
 #            complexity of the travessal which is 3n  theta(n)
 
 #                                                     
+####        Red-Black Trees Basics 
+#             for the BST, the most often performance - find/insert/delete
+#              if inser t 1,2,3,....n, the height of the tree goes as n, bad scnaria 
+#              if the insert 1,2,3,....n, the height of the trees goes as log2(n), good scanria 
+#            >>> 2-3 trees >>> AVL trees >> Treeps >> Skip limit
+###            extra staff of the BST 
+#              sitll follow the BST priciple 
+#           Rule:
+#            >1. rood and leaves NIL are black
+#            >2. every red node must have black children 
+#            >3. black height is well defined, number of black childrean on any part from any node to a leaf must be the same
+#            
+#               Any RBT   the heigt of the h is:
+#                   log2(n)  <= h <= 2log2(n+1)
+#                
+#
+####       Operation of RBT - Insert / Find / Delete
+#           same as the BST 
+#           >>except the                          
+#
+#
+#
+#
 #
 #
 #
