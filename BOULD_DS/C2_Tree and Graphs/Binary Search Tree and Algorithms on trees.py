@@ -82,6 +82,25 @@
 #           same as the BST 
 #           >>except the                          
 #
+###         RBT _ insert(key)
+#            1. find(key), delete the NIL, insert the key. 
+#            2. what the color of the insert(key) ? 
+#               > Case.1: the parent is black, there is no red red vilation, lucky case, nothing to do.
+#               > Case.2: the parent is red, there is red-red relation, unlucky, slight change, red-red violation 
+#               > Case.3: the parent is red, red-red violation, ground parent, --uncle of of the node ---- re-color the tree, change the z to red and take y and uncle w black, x keep the red
+#                   whatif the z is red and red, since is recusive, thus then it will solved by recusive.  
+#               > Case.4: the parent is red, red-red violation, uncle w is black, peform the ROTATION 
+#                   rotation the tree
+##             
+#            >>>>Tree Rotation 
+#               >1. right rotation 
+#               >2. left rotation
+#
+# 
+#
+#
+#
+#
 #
 #
 #
