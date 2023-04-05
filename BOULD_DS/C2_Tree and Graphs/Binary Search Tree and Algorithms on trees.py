@@ -91,6 +91,9 @@
 #                   whatif the z is red and red, since is recusive, thus then it will solved by recusive.  
 #               > Case.4: the parent is red, red-red violation, uncle w is black, peform the ROTATION 
 #                   rotation the tree
+#               How to remember this ? 
+#                remember the principle, just need to lookup for the pyseudo code 
+#               
 ##             
 #            >>>>Tree Rotation 
 #               >1. right rotation 
