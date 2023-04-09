@@ -100,7 +100,27 @@
 #               >2. left rotation
 #
 # 
-#
+####        Skip Lists 
+#               1. Alternative binary tree data structure 
+#               2. Randomaized data structure 
+#               3. invented by bill pugh
+#               4. find() each up layer is for the express layer, then top more layer is more express layer 
+##           Example: find(), from the top layer ----not find too far---- down layer ---- then find the find() 
+#               5. insert(), take a coin to toss it, if turn up head, create a insert ele in the fresh layer 
+#                   while if the current layer is top layer, set it to current layer, create a node in the current layer 
+#               
+##           Analysis of height = geometric random variable = 1 / (1-p), avg height of the skip list 
+#            Probability of exceeding at least height h with n node
+#                    booles inequality: p(at heast one node exceed h) <= np^n 
+#                    n = 128, c = 2, height > = 2log2(128) = 14 
+#                    comparable to binary search list, bounded to log2(N) 
+#                       
+##          Expected Running time of Find algorithms = 4h = clog2(n)
+#            
+#                               
+#               
+#                 
+#              
 #
 #
 #
