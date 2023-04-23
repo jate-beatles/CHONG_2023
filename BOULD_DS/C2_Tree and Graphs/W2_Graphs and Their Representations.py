@@ -59,7 +59,51 @@
 ####        Depth First Search (DFS) 
 #                  BFS vs DFS 
 #               
-#
-#
+#            continue visit the succuss of the node, then return
+#            
+###         pseudo code 
+#           def visit(G,v) 
+#              ##global time = 1 
+#              v(pi = parent; d = discovery time[undifined]; f = finish time;)
+#              ##Book Keeping 
+#               if (v.seen): 
+#                return
+#               for all v in adjacent ( v) 
+#                   if(not v. seen):
+#                    v.seen = True
+#                    v.pin = v
+#3                   v.d = time
+#                     time += 1 
+####                dfs visit (G,v)
+#           time = time + 1 
+#           v.f = time
+#           
+####        1. when dfs running, it creas dfs tree 
+#           2. some of edge: 
+#               > back edge - back to the ancestor of the node
+#               > cross edge - sibling 
+#               > forward edge - go form the ancestor not directe child of the tree 
+#           
+####        DFS example 
+#           
+#           run the outer loop: 
+#               for i = 1 to n: # n = all nodes
+#                   dfs visit(G,i)
+#           dfs visit do not return a tree, which will show the edges 
+#           
+####        Back Edges -- Desc tp the ancestor nodes
+#           Foward Edges -- anscendant to the nodes not his child
+#           Cross Edge -- sibling child cross
+###        Find the edge by the discovery time and finish time 
+#           --Back edge:  v.d < u.d < u.f < v.f  [ u back to v]
+#           --Forward edge: u.d < v.d < v.f < u.f  [v back to u] u forward to v
+#           --Cross edge: 
+
+###         The edge for usefull for the problem: 
+#               if the graph has the circle: 
+#                back edge = cycle?? every back edge will for create a cycle. 
+#               
+#                
+#                         
 #
 #
