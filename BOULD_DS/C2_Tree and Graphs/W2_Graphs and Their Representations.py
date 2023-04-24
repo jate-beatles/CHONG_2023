@@ -120,3 +120,15 @@
 #           4. back edge has no Topologicdal sort ----- circle 
 #           visit every node, total time = theta (|v| + |f|)
 #               
+
+####
+####        SCC - Strongly Constucted Component
+#              1. a subset of the vertices
+#              2. the path must entire lie inside - every node to every node
+#              3. circle should also be the SCC 
+#              4. Maximal strongly connected components 
+#   
+#            Parsing the 
+#
+##
+#
