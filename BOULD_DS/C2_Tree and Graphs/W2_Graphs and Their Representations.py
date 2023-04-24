@@ -106,4 +106,17 @@
 #                
 #                         
 #
-#
+####        Topological Sort
+#           DAG -  direcrted acyclic graph 
+#            tasks for hte each v_1, v_2, v_3, 
+#             >>>  v_2 only start when the v_1 finish ...., edge call as dependences 
+#             >>> sor the graph 
+#             >>> the v_1 > v_2 ....>v_6   call as the topologicdal sort 
+#            [direct acyclic graph] 
+#            
+#           1. DFS
+#           2. sort the order in the descending order
+#           3. dfs - finish step then, put the node as the descending order
+#           4. back edge has no Topologicdal sort ----- circle 
+#           visit every node, total time = theta (|v| + |f|)
+#               
