@@ -110,7 +110,7 @@
 #           DAG -  direcrted acyclic graph 
 #            tasks for hte each v_1, v_2, v_3, 
 #             >>>  v_2 only start when the v_1 finish ...., edge call as dependences 
-#             >>> sor the graph 
+#             >>> sort the graph 
 #             >>> the v_1 > v_2 ....>v_6   call as the topologicdal sort 
 #            [direct acyclic graph] 
 #            
@@ -129,6 +129,9 @@
 #              4. Maximal strongly connected components 
 #   
 #            Parsing the 
-#
-##
+####       SCC - strongly connected components  - Properties 
+####        >>>1. If the Maximal Strongly Connected components MSCC - 2 different components 
+#             s1 union with s2, is a large scc containing s1 and s2, - t therefore s1 cannot be maximal and s2 cannot be maxiaml 
+#           
+#           >>>3.     
 #
