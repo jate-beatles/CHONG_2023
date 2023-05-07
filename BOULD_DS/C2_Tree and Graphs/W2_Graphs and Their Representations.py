@@ -128,10 +128,22 @@
 #              3. circle should also be the SCC 
 #              4. Maximal strongly connected components 
 #   
-#            Parsing the 
 ####       SCC - strongly connected components  - Properties 
-####        >>>1. If the Maximal Strongly Connected components MSCC - 2 different components 
-#             s1 union with s2, is a large scc containing s1 and s2, - t therefore s1 cannot be maximal and s2 cannot be maxiaml 
-#           
-#           >>>3.     
-#
+#           >>>1. If the Maximal Strongly Connected components MSCC - 2 different components 
+#             s1 union with s2, is a large scc containing s1 and s2, - therefore s1 and s2 cannot be maximal and s2 cannot be maxiaml connected conponents 
+#               in many books the notation scc is mscc, while in this lecture, MSCC only is the MSCC
+#         
+#           >>>2. Supper Graph - take MSCC into a node by itself - and add connection across the SCC
+#                 new edge - MSCC supper graph - MSCC supper graph cannot have circle - 
+#                 - MSCC
+#           >>>3. The reverse graph, G has the same MSCC as the original 
+#                 - revere the direction of every edge
+#                 - 
+####        SCC - Algorithm
+#                1. do the DFS on teh G^T reverse the G
+#                   DFS on the origin node >>>> then DFS on the reverse graph
+#                   DFS reverse - descending order of the finish time - keep the list of the last change to 
+#                   DFS REVERSE - DFS visit is start then only visit it self - then you will print tjhe MSCC in the list
+#                Why Algorithm works 1. Supper graph is DAG 
+#                                    2. Supper graph exist, and 
+#               
