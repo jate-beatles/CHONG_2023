@@ -146,4 +146,4 @@
 #                   DFS REVERSE - DFS visit is start then only visit it self - then you will print tjhe MSCC in the list
 #                Why Algorithm works 1. Supper graph is DAG 
 #                                    2. Supper graph exist, and 
-#               
+#                2. M
