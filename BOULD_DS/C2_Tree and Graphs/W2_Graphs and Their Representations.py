@@ -151,5 +151,6 @@
 ###        Why Algorithm works 1. Supper graph is DAG
 #                              2. Supper graph exist, and the reverse graph has the same MSCC as the origin MSCC 
 #                              3. Topological super graph, then the circle in it 
-#                              4. 
+#                              4. The SCC connect with another SCC, then become a MSCC 
+#                               
 #       
