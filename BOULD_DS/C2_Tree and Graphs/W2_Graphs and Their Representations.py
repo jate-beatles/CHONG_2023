@@ -139,11 +139,17 @@
 #           >>>3. The reverse graph, G has the same MSCC as the original 
 #                 - revere the direction of every edge
 #                 - 
-####        SCC - Algorithm
-#                1. do the DFS on teh G^T reverse the G
+####        SCC - Algorithm - for finding the maximal strongly connected components 
+#                1. do the DFS on the G^T reverse the G
 #                   DFS on the origin node >>>> then DFS on the reverse graph
-#                   DFS reverse - descending order of the finish time - keep the list of the last change to 
+#                   ----keep the list of the finish time of the DFS on the G ----
+#                   DFS on the reverse G - descending order of the finish time - each element settle as the order 
 #                   DFS REVERSE - DFS visit is start then only visit it self - then you will print tjhe MSCC in the list
-#                Why Algorithm works 1. Supper graph is DAG 
-#                                    2. Supper graph exist, and 
-#                2. M
+#                    - then dfs search as :  {1} {2, 5, 4,3}, remove the node from the reverse list 
+#                      print out the MSCC - your will end up to print the MSCC of the DFS on the reverser G
+#
+###        Why Algorithm works 1. Supper graph is DAG
+#                              2. Supper graph exist, and the reverse graph has the same MSCC as the origin MSCC 
+#                              3. Topological super graph, then the circle in it 
+#                              4. 
+#       
