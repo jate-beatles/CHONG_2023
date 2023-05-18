@@ -14,7 +14,6 @@ class DFSTimeCounter:
     def get(self):
         return self.count 
 
-
 class UndirectedGraph:     
     # n is the number of vertices
     # we will label the vertices from 0 to self.n -1 
@@ -77,7 +76,11 @@ class UndirectedGraph:
                 dfs_back_edges.append((i,node_index))
             else:
                 pass
-            finish_times[i] = dfs_timer.get()
+        finish_times[i] = dfs_timer.get()
+        dfs_timer.increment()
+
+
+        
 
 
 
