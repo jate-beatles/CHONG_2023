@@ -4,34 +4,37 @@
 #           -what is graphs? relation of the finite set;
 #           - V = {v1, v2, v3, v4}
 #              find the different combination 
-#              -no self loop/ Multiedge
-#              -direct & undirect graph
+#              -no self loop/ Multiedge relate to same nodes 
+#              -direct & undirect graph(bidirectional)
 #              undirect has two way direct
-#           -compute network
-#           -Ecological network
-#           -Elechical circuite
-#           -GOOGLE MAPS roads 
+
+#           Why do the graph comes from?  
+#           -compute network  - node is servers - edge is the link
+#           -Ecological network  - node is people - edge is the network
+#           -Elechical circuite  - node is species  - edge is relation 
+#           -GOOGLE MAPS roads  - 
 #           >>>>>>Problems
 #               Tranverse problem
-#               finding short problems
-#               
+#               finding short spots problems
+#               finding the spainning trees
+#               finding the flow
 #
+#           How to present the graph - 
 ###         - Complexity of the presentation - 
-#           - Adjacency List Representation - represent as list - each point to its neighbor
-#             k nodes, m edge - each of the node represent to its neightbor 
-#               
-#                 
-#               
-#               
-####        Graph Traversa - Bread First - specify the starting point 
+#           - Simple way to present the matrix - Adjacency List Representation - represent as list - each point to its neighbor
+#             k nodes, m edge - each of the node represent to its neightbor [less contains the 0 than adjacnecy list]
+#             
+#                  
+###############################################################################             
+####        Graph Traversa - Bread First - specify the starting point - Short Spot Search 
 #               1. Traversal - vist the node in the graph in some orders 
 #               2. can only visit the node once
 #               3. disconnected node - visit the nodes at once
 #               4. If i visit a new node, it must be along with edge starting from already visited node.
-#           Travesal Eaxmple - crawling the web - don't want to visit the page duplicated - only once
+#           Travesal Eaxmple - Business Case -  crawling the web - don't want to visit the page duplicated - only once
 #               the web is the graph - html links to each graph
 #               
-###         Traversal Type ---- Bread Fist Search 
+###         Traversal Type ---- Bread Fist Search - FIFO data structure 
 #               Adjacent list - FIFO queue, - take the head of the edge out of the queue - then move forwards - 
 #               Bread search: 1. starting the node; 
 #                             2. queue data structure 
