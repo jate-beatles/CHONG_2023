@@ -58,28 +58,29 @@
 #                                    >>> u.seen = true
 #                                    >>> 
 #               
-#
+###############################################################################
 ####        Depth First Search (DFS) 
 #                  BFS vs DFS 
 #               
-#            continue visit the succuss of the node, then return
+#            continue visit the successor of the node, then return then visit the nodes which not visited 
 #            
-###         pseudo code 
-#           def visit(G,v) 
+#            
+####         pseudo code l - df visit(G,v) 
+#               
+#           def visit(G,u) 
 #              ##global time = 1 
-#              v(pi = parent; d = discovery time[undifined]; f = finish time;)
+#              u(pi = parent; d = discovery time[undifined]; f = finish time;)
 #              ##Book Keeping 
-#               if (v.seen): 
+#               if (v.seen): ###just return if the node already seen 
 #                return
 #               for all v in adjacent ( v) 
-#                   if(not v. seen):
-#                    v.seen = True
-#                    v.pin = v
-#3                   v.d = time
-#                     time += 1 
-####                dfs visit (G,v)
-#           time = time + 1 
-#           v.f = time
+#                 if v.seen = NIL
+#                   v.pi = v
+#                   v.d = time
+#                   time += 1 
+#                   dfs visit (G,v)     
+#                   v.f = time
+#                   v.seen = TRUE             
 #           
 ####        1. when dfs running, it creas dfs tree 
 #           2. some of edge: 
