@@ -113,8 +113,8 @@
 ####        Topological Sort
 #           DAG -  direcrted acyclic graph 
 #            tasks for hte each v_1, v_2, v_3, 
-#             >>>  v_2 only start when the v_1 finish ...., edge call as dependences 
-#             >>> sort the graph 
+#             >>>  v_2 only start when the v_1 finish ...., edge call as dependences ---dependence graph----just like serve cup of tea, which name is direct acychil graph 
+#             >>> sort the graph  ---- 
 #             >>> the v_1 > v_2 ....>v_6   call as the topologicdal sort 
 #            [direct acyclic graph] 
 #            
@@ -138,7 +138,7 @@
 #               in many books the notation scc is mscc, while in this lecture, MSCC only is the MSCC
 #         
 #           >>>2. Supper Graph - take MSCC into a node by itself - and add connection across the SCC
-#                 new edge - MSCC supper graph - MSCC supper graph cannot have circle - 
+#                 new edge - MSCC supper graph - MSCC supper graph cannot have circle - ohterwise it will be the full size MSCC
 #                 - MSCC
 #           >>>3. The reverse graph, G has the same MSCC as the original 
 #                 - revere the direction of every edge
