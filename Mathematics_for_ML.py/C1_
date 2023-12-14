@@ -1,0 +1,22 @@
+#### Linear Algebra 
+
+##          The size for the vector is the square root of hte sum of the ###squares of its compoments
+
+###### a. b= a1*b1 + a2*b2 + .... + an*bn 
+### Projection is the S onto R, the shadow length of the projection 
+#   
+#
+#   r.s = |r| * |s| * cos(theta)  >>>> theta is the angle between r and s 
+#
+#
+#   (r.s)/|r| = |s|* cos(theta)   >>> right part is the scalar project 
+#
+#
+#
+#
+
+
+
+
+
+
