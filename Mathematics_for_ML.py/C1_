@@ -11,6 +11,15 @@
 #
 #   (r.s)/|r| = |s|* cos(theta)   >>> right part is the scalar project 
 #
+##### Projection:    the sca  (r.e) / |e|^2 
+#####  Changing Basis 
+#
+# change the vector basis using other vector - simply understand process by the angle is 90 degree 
+#
+
+####  Basis & Vector the linear independece 
+#       b3 != a* b2 + c * b1   there are linear combinations 
+#       
 #
 #
 #
