@@ -31,11 +31,6 @@
 
 
 
-
-
-
-
-
 #### Linear Algebra 
 
 ##          The size for the vector is the square root of hte sum of the ###squares of its compoments
