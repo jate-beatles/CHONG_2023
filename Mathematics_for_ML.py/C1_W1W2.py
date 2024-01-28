@@ -33,6 +33,34 @@
 #       if the cosine is 180 degree, then cos(180) is -1, the r.s will be -|s||r| 
 #
 #     
+######################################################################
+#### Projection
+#    r.s = |r||s|* cos(theta)
+#        |s|*cos(theta)   is the shadow of the size s on the r 
+#        the dot of production is the size of |r| * projection of the |s| on the the |r| 
+#        
+#     r.s / |r|  = |s| cos(theta)     SCALAR PROJECTION
+#### The vector projection ---------r.r = |r||r|  ---is a number * length of r
+###########    r.s/ |r||r| = r.s / r.r ################
+###########   vector projection = r. [(r.s) / |r||r|]   ####The unit vector projection
+
+
+
+#####################################################################
+#### Changing BASIS
+#    the basis vector to describe the any vector
+#       the big if ==orthogonal== check whether the basis vector is 90 degree  cos(theta)  = b1.b2/|b1||b2|  = 0 
+#       but we also could use the matirx to find the vector b1, and b2
+#        1. using the dot product to chech basis vector is 90 degree
+#        2. find the vector projection ===== re.b/|b|^2
+#        3. find the vector projection for each basis 
+#        4. rb = [r.b1 / |b1|^2].b1 + [r.b2/|b2|^2].b2
+#        
+#    
+#####################################################################
+####  Basis - set of n vectors (i) not linear combinations each other linearly independent
+#                              b3 != a1b1 + a2b2
+#                              (ii)span the space
 
 
 
