@@ -61,6 +61,25 @@
 ####  Basis - set of n vectors (i) not linear combinations each other linearly independent
 #                              b3 != a1b1 + a2b2
 #                              (ii)span the space
+#                               (iii)the space is n-dimensional
+#
+####  The applications of changing basis
+#     
+
+
+########################################################################
+######################################################################
+#### Week 3 ####
+#### Matrices, vectors and solving simutaneous equation problems
+#   
+#### Matrix transform space
+#       Matrix  A,  the transform as the r
+#       then the vector:  A(nr) = nr'
+#                         A(r+s) = Ar + As 
+#                         A(re1' + me2')
+#                         
+#
+
 
 
 
