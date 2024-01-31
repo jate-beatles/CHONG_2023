@@ -77,9 +77,42 @@
 #       then the vector:  A(nr) = nr'
 #                         A(r+s) = Ar + As 
 #                         A(re1' + me2')
-#                         
+#  any vector could be express by the element vector, the n
+#  the matrix of the n vector change the transform, to get the new vector
+#                           
+#### Type of matirx transformation 
+#  1 0
+#  0 1    called as identity matirx
+##
+#  3 0 
+#  0 2    called as the scaled matrix
+##
+#  -1 0 
+#   0 1    called to flip the x-axis cordinator 90 degree
+##
+#   -1 0 
+#    0 -1   called to flip both asix cordinator
+##
+#    0 1 
+#    1 0    called to put a mirror in 45 degree
+##   
+#    0 -1 
+#    -1 0   called to put the mirror in aonther 45 degree
+##
+#    -1 0 
+#     0 1    called to put vertical mirror 
 #
-
+## 
+#     1 0 
+#     0 -1    called to put the horizantal mirror 
+##
+#     1 1 
+#     0 1     called to shear the x-axis to right 1 
+##
+#     0 -1 
+#     1  0    called to rotate the vector 
+#
+#
 
 
 
