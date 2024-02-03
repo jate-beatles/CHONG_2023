@@ -88,21 +88,20 @@
 #  0 2    called as the scaled matrix
 ##
 #  -1 0 
-#   0 1    called to flip the x-axis cordinator 90 degree
+#   0 1    called to flip the x-axis cordinator 90 degree [anti-clock wise direction]
 ##
 #   -1 0 
-#    0 -1   called to flip both asix cordinator
+#    0 -1   called to flip both asix cordinator [x-axis turn 90, and y-axis turn 90]
 ##
 #    0 1 
-#    1 0    called to put a mirror in 45 degree
+#    1 0    called to put a mirror based on 45 degree
 ##   
 #    0 -1 
-#    -1 0   called to put the mirror in aonther 45 degree
+#    -1 0   called to put the mirror in aonther -45 degree
 ##
 #    -1 0 
 #     0 1    called to put vertical mirror 
-#
-## 
+##
 #     1 0 
 #     0 -1    called to put the horizantal mirror 
 ##
@@ -112,6 +111,12 @@
 #     0 -1 
 #     1  0    called to rotate the vector 
 #
+#
+#########################################################################
+#### Composition or combination of matirs transformations 
+##
+#     A1 to A2 to A3 is Associative     ---- commutative
+#       
 #
 
 
