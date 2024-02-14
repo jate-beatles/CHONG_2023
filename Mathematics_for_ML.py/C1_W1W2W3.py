@@ -115,9 +115,26 @@
 #########################################################################
 #### Composition or combination of matirs transformations 
 ##
-#     A1 to A2 to A3 is Associative     ---- commutative
-#       
+#     A1 to A2 to A3 is Associative     
+#     but not --- cannot change the order ---- commutative
+#     
+##########################################################################
+#### Solving the problems - Gaussian elimination 
+#   find the inverse of the to find the A 
+#   A^-1 . A = I 
+#   find the A inverse
 #
+#   eliminate the diagnose 0 of the matrix 
+#   to find the 100
+#             010
+#             001
+#       elimination, back substitution up of the solution
+####  form Gaussian elimination to finding the inveser
+#      B = A ^(-1)   by the eliminate the decompisition of the matrix, to find the inverse
+# 
+#
+#   
+
 
 
 
