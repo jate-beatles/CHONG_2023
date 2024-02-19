@@ -133,7 +133,12 @@
 #      B = A ^(-1)   by the eliminate the decompisition of the matrix, to find the inverse
 # 
 #
-#   
+##################################################################################
+####  Determinants and inverses 
+####  Detereminants is the area of the matirix, if the determinant is 0, then no solution
+#      the matirx collapase in 2d space
+#
+
 
 
 
