@@ -183,12 +183,36 @@ def fixRowOne(A) :
     A[1] = A[1] / A[1,1]
     return A
 
+def fixRowTwo(A) :
 
+    A[2] = A[2] - A[2,0]*A[0]
+    A[2] = A[2] - A[2,1]*A[1]
 
+    if A[2,2] == 0 :
+        A[2]= A[2] + A[3]
+        A[2] = A[2] - A[2,0]*A[0]
+        A[2] = A[2] - A[2,1]*A[1]
 
+    if A[2,2] == 0 :
+        raise MatrixIsSingular()
+    
+    A[2] = A[2] / A[2,2]
+    return A
 
+def fixRowThree(A) :
 
+    A[3] = A[3] - A[3,0]*A[0]
+    A[3] = A[3] - A[3,1]*A[1]
+    A[3] = A[3] - A[3,2]*A[2]
 
+    if A[3,3] == 0: 
+        A[3] = A[3] + A[2]
+        A[2] = A[2] - A[2,0]*A[0]
+        A[2] = A[2] - A[2,1]*A[1]    
+    if :
+        raise MatrixIsSingular()
+    
+    return A
 #### Linear Algebra 
 
 ##          The size for the vector is the square root of hte sum of the ###squares of its compoments
