@@ -238,8 +238,27 @@ def fixRowThree(A) :
 #
 # Nothing updated  refer to this modules 
 #
+#########################################################################################################
+#########################################################################################################
+############ W4 Matirx make linear Mapping
 
-
+#### Einstein Summatoin 
+##
+#### for each element, a ij, i is the row, and the j is the column number
+#       (ab).23   = a 2 row * b 3 column 
+#
+#     if the summation convetion is for coding 
+#       AB = C 
+#       Cik = a(ij) b(jk)              the a column number should == row of the b
+#       
+#       
+#### Matix changin basis
+#      changing the frame of the matrix from A to B frame
+#       how to inverser the marix back? B^-1
+#       
+#            
+#
+#
 
 
 
