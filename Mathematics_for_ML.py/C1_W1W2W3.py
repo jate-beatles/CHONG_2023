@@ -256,10 +256,74 @@ def fixRowThree(A) :
 #      changing the frame of the matrix from A to B frame
 #       how to inverser the marix back? B^-1
 #       
-#            
+#       Bear basis vector in my basis world matrix :
+#       [3,1]
+#       [1,1] 
+#       find the B^-1 of to reverse the bear basis
+#       1/2 * [1, -1]     
+#             [-1, 3]       my basis in bear world 
+#   
+#       
+#### Using the projection - vector module could be use the prjection to the point
+#      using the that projection to changing should be orthogonal
+####    Doing the transformation in a changed basis 
+####    change the basis rotation
+#       
+#       [3, 1]
+#       [1, 1]
+#           
+#       the rotation basis of 45 degree in my basis:
+#       1/2^(1/2) [1, -1]
+#                 [1, 1]
+#     so the flow as below: 
+#    B^-1  * Roration * Bear Basis * [vector] 
+#       
+#       
+#### Orthogonal Matrices 
+#       transpose A is the A[T]ij  = Aji 
+#          [1,2]                [1,3]
+#          [3,4]   transpose    [2,4]
 #
+#       A(T). A is the n*n identical matrix
+#       A(T) = A^(-1) 
+#       A(T) . A = I 
+#       
 #
+#### The gram-schmidt process 
+#
+#       built the thorogonal matrix 
+#       v1 set - e1 is the normalize vision of v1 
+#       
+#       v2 = projection to e1 on the direction of v1 + u2  which is orthogonal to e1 
 
+########################################################################################
+########################################################################################
+#Gramschmidt Process 
+#       
+A[0, 0]  A[0, 1]  A[0, 2]  A[0, 3]
+A[1, 0]  A[1, 1]  A[1, 2]  A[1, 3]
+A[2, 0]  A[2, 1]  A[2, 2]  A[2, 3]
+A[3, 0]  A[3, 1]  A[3, 2]  A[3, 3]
+
+# the dot production in numpy
+#u @ v
+import numpy as np
+import numpy.linalg as la
+
+verySmallNumber = 1e-14 # That's 1×10⁻¹⁴ = 0.00000000000001
+
+def gsBasis4(A) :
+    B = np.array(A, dtype=np.float_)
+    B[:, 0] = B[:, 0] / la.norm(B[:, 0])
+#
+#
+# 
+#
+#        
+#
+#
+#
+              
 
 
 
