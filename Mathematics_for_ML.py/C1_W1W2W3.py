@@ -299,7 +299,16 @@ def fixRowThree(A) :
 ########################################################################################
 ########################################################################################
 #Gramschmidt Process 
-#       
+#   v = [v1, v2, ...vn]
+#### Step1: e1 = v1 / |v1|  which is normalised v1 as the basis 
+#### Step2: v2 = (v2.e1). e1 /|e1| + u2  whici u2 is the orthogonal component of basis to e1
+#      find the u2 = v2 - (v2.e1)e1, then standilze u2 find the e2
+# 
+#### Step3: u3 =  v3 - (v3.e1)e1 - (v3.e2)e2 which u3 is the perpendicular to the plane of e1 * e2
+#     [perpendicular to e1 & e2 plance]
+#     then standarlized 
+#
+
 A[0, 0]  A[0, 1]  A[0, 2]  A[0, 3]
 A[1, 0]  A[1, 1]  A[1, 2]  A[1, 3]
 A[2, 0]  A[2, 1]  A[2, 2]  A[2, 3]
@@ -315,6 +324,13 @@ verySmallNumber = 1e-14 # That's 1×10⁻¹⁴ = 0.00000000000001
 def gsBasis4(A) :
     B = np.array(A, dtype=np.float_)
     B[:, 0] = B[:, 0] / la.norm(B[:, 0])
+    ### COLUMN 0 TO NOMALIZE
+    B[:, 1] = B[:, 1] - B[:, 1] @ B[:, 0] * B[:, 0]
+    ### C
+    if la.norm(B[:, 1]) > verySmallNumber :
+        B[:, 1] = B[:, 1] / la.norm(B[:, 1])
+    else :
+        B[:, 1] = np.zeros_like(B[:, 1])
 #
 #
 # 
