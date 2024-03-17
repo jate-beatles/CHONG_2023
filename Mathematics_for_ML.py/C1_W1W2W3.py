@@ -138,11 +138,11 @@
 ####  Detereminants is the area of the matirix, if the determinant is 0, then no solution
 # #      the matirx collapase in 2d space
 
-""" 
-A[0, 0]  A[0, 1]  A[0, 2]  A[0, 3]
-A[1, 0]  A[1, 1]  A[1, 2]  A[1, 3]
-A[2, 0]  A[2, 1]  A[2, 2]  A[2, 3]
-A[3, 0]  A[3, 1]  A[3, 2]  A[3, 3] """
+# """ 
+# A[0, 0]  A[0, 1]  A[0, 2]  A[0, 3]
+# A[1, 0]  A[1, 1]  A[1, 2]  A[1, 3]
+# A[2, 0]  A[2, 1]  A[2, 2]  A[2, 3]
+# A[3, 0]  A[3, 1]  A[3, 2]  A[3, 3] """
 import numpy as np 
 
 def isSingular(A): 
@@ -199,20 +199,20 @@ def fixRowTwo(A) :
     A[2] = A[2] / A[2,2]
     return A
 
-def fixRowThree(A) :
+# def fixRowThree(A) :
 
-    A[3] = A[3] - A[3,0]*A[0]
-    A[3] = A[3] - A[3,1]*A[1]
-    A[3] = A[3] - A[3,2]*A[2]
+#     A[3] = A[3] - A[3,0]*A[0]
+#     A[3] = A[3] - A[3,1]*A[1]
+#     A[3] = A[3] - A[3,2]*A[2]
 
-    if A[3,3] == 0: 
-        A[3] = A[3] + A[2]
-        A[2] = A[2] - A[2,0]*A[0]
-        A[2] = A[2] - A[2,1]*A[1]    
-    if :
-        raise MatrixIsSingular()
+#     if A[3,3] == 0: 
+#         A[3] = A[3] + A[2]
+#         A[2] = A[2] - A[2,0]*A[0]
+#         A[2] = A[2] - A[2,1]*A[1]    
+#     if :
+#         raise MatrixIsSingular()
     
-    return A
+#     return A
 #### Linear Algebra 
 
 ##          The size for the vector is the square root of hte sum of the ###squares of its compoments
@@ -298,7 +298,7 @@ def fixRowThree(A) :
 
 ########################################################################################
 ########################################################################################
-#Gramschmidt Process 
+#Gram-schmidt Process 
 #   v = [v1, v2, ...vn]
 #### Step1: e1 = v1 / |v1|  which is normalised v1 as the basis 
 #### Step2: v2 = (v2.e1). e1 /|e1| + u2  whici u2 is the orthogonal component of basis to e1
@@ -306,14 +306,14 @@ def fixRowThree(A) :
 # 
 #### Step3: u3 =  v3 - (v3.e1)e1 - (v3.e2)e2 which u3 is the perpendicular to the plane of e1 * e2
 #     [perpendicular to e1 & e2 plance]
-#     then standarlized 
-#
-
+#     then nomalized u3 to get the e3, 
+#     find the all unit vectors e1, e2, e3
+'''
 A[0, 0]  A[0, 1]  A[0, 2]  A[0, 3]
 A[1, 0]  A[1, 1]  A[1, 2]  A[1, 3]
 A[2, 0]  A[2, 1]  A[2, 2]  A[2, 3]
 A[3, 0]  A[3, 1]  A[3, 2]  A[3, 3]
-
+'''
 # the dot production in numpy
 #u @ v
 import numpy as np
@@ -323,21 +323,70 @@ verySmallNumber = 1e-14 # That's 1×10⁻¹⁴ = 0.00000000000001
 
 def gsBasis4(A) :
     B = np.array(A, dtype=np.float_)
-    B[:, 0] = B[:, 0] / la.norm(B[:, 0])
     ### COLUMN 0 TO NOMALIZE
+    B[:, 0] = B[:, 0] / la.norm(B[:, 0])
+
+    ### get the u1 
     B[:, 1] = B[:, 1] - B[:, 1] @ B[:, 0] * B[:, 0]
-    ### C
+
+    ### normalise the u2 to get the e1
     if la.norm(B[:, 1]) > verySmallNumber :
         B[:, 1] = B[:, 1] / la.norm(B[:, 1])
     else :
         B[:, 1] = np.zeros_like(B[:, 1])
-#
-#
+
+    ### get the u2 & nomalise u2 to get the e2
+    B[:,2] = B[:,2] - B[:,2]@B[:,0]*B[:,0] - B[:,2]@B[:,1]*B[:,1]
+    if la.norm(B[:, 2]) > verySmallNumber :
+        B[:, 2] = B[:, 2] / la.norm(B[:, 2])
+    else :
+        B[:, 2] = np.zeros_like(B[:, 2])  
+
+    ### get the u3 & normalized u3 to get the e3
+    B[:,3] = B[:,3] - B[:,3]@B[:,0]*B[:,0] - B[:,3]@B[:,1]*B[:,1] - B[:,3]@B[:,2]*B[:,2]
+    if la.norm(B[:, 3]) > verySmallNumber :
+        B[:, 3] = B[:, 3] / la.norm(B[:, 3])
+    else :
+        B[:, 3] = np.zeros_like(B[:, 3]) 
 # 
-#
-#        
-#
-#
+#    # Finally, we return the result:
+    return B
+        
+def gsBasis(A) :
+    B = np.array(A, dtype=np.float_) # Make B as a copy of A, since we're going to alter it's values.
+    # Loop over all vectors, starting with zero, label them with i
+    for i in range(B.shape[1]) :
+        # Inside that loop, loop over all previous vectors, j, to subtract.
+        for j in range(i) :
+            # Complete the code to subtract the overlap with previous vectors.
+            # you'll need the current vector B[:, i] and a previous vector B[:, j]
+            B[:, i] = B[:,i] - B[:,i]@B[:,j]*B[:,j]
+        # Next insert code to do the normalisation test for B[:, i]
+        if la.norm(B[:, i]) > verySmallNumber :
+            B[:, i] = B[:, i] / la.norm(B[:, i])
+    # Finally, we return the result:
+    return B
+
+# This function uses the Gram-schmidt process to calculate the dimension
+# spanned by a list of vectors.
+# Since each vector is normalised to one, or is zero,
+# the sum of all the norms will be the dimension.
+def dimensions(A) :
+    return np.sum(la.norm(gsBasis(A), axis=0))
+
+'''
+V = np.array([[1,0,2,6],
+              [0,1,8,2],
+              [2,8,3,1],
+              [1,-6,2,3]], dtype=np.float_)
+gsBasis4(V)
+
+B = np.array([[6,2,1,7,5],
+              [2,8,5,-4,1],
+              [1,-6,3,2,8]], dtype=np.float_)
+gsBasis(B)
+'''
+
 #
               
 
