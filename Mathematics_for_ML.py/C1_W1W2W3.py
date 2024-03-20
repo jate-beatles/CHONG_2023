@@ -387,7 +387,28 @@ B = np.array([[6,2,1,7,5],
 gsBasis(B)
 '''
 
+########################################################################################
+########################################################################################
+#Reflecting in a plane
+##
+
+#T=E*Te*E−1
+
+#  a=s⋅t     M = A @ B
 #
+# inv(A)
+# transpose(A)
+# gsBasis(A)
+
+import numpy as np
+from numpy.linalg import norm, inv
+from numpy import transpose
+from readonly.bearNecessities import *
+
+
+
+
+
               
 
 
